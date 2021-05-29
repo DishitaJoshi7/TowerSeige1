@@ -46,7 +46,10 @@ function setup() {
   polygon = Bodies.circle(50, 200, 20);
   World.add(world, polygon);
 
-  slingShot = new SlingShot(this.polygon{ x: 200, y: 50 });
+  slingShot = new SlingShot(this.polygon , { x: 200, y: 50 });
+
+  imageMode(CENTER)
+  image(polygon_img , polygon.position.x , polygon.position.y , 40 , 40);
 
 
 
@@ -58,7 +61,7 @@ function draw() {
   fill("lightyellow");
   text(mouseX + "," + mouseY, mouseX, mouseY);
 
-
+  
 
   ground.display();
   stand1.display();
